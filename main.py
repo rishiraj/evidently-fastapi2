@@ -70,8 +70,6 @@ column_mapping.categorical_features = categorical_features
 regression_perfomance_dashboard = Dashboard(tabs=[RegressionPerformanceTab()])
 regression_perfomance_dashboard.calculate(reference, None, column_mapping=column_mapping)
 
-regression_perfomance_dashboard.show()
-
 regression_perfomance_dashboard.save("./static/index.html")
 
 """##  Week 1"""
@@ -79,15 +77,11 @@ regression_perfomance_dashboard.save("./static/index.html")
 regression_perfomance_dashboard.calculate(reference, current.loc['2011-01-29 00:00:00':'2011-02-07 23:00:00'], 
                                             column_mapping=column_mapping)
 
-regression_perfomance_dashboard.show()
-
 regression_perfomance_dashboard.save("./static/regression_performance_after_week1.html")
 
 target_drift_dashboard = Dashboard(tabs=[NumTargetDriftTab()])
 target_drift_dashboard.calculate(reference, current.loc['2011-01-29 00:00:00':'2011-02-07 23:00:00'], 
                                    column_mapping=column_mapping)
-
-target_drift_dashboard.show()
 
 target_drift_dashboard.save("./static/target_drift_after_week1.html")
 
@@ -96,14 +90,10 @@ target_drift_dashboard.save("./static/target_drift_after_week1.html")
 regression_perfomance_dashboard.calculate(reference, current.loc['2011-02-07 00:00:00':'2011-02-14 23:00:00'], 
                                             column_mapping=column_mapping)
 
-regression_perfomance_dashboard.show()
-
 regression_perfomance_dashboard.save("./static/regression_performance_after_week2.html")
 
 target_drift_dashboard.calculate(reference, current.loc['2011-02-07 00:00:00':'2011-02-14 23:00:00'], 
                                    column_mapping=column_mapping)
-
-target_drift_dashboard.show()
 
 target_drift_dashboard.save("./static/target_drift_after_week2.html")
 
@@ -112,14 +102,10 @@ target_drift_dashboard.save("./static/target_drift_after_week2.html")
 regression_perfomance_dashboard.calculate(reference, current.loc['2011-02-15 00:00:00':'2011-02-21 23:00:00'], 
                                             column_mapping=column_mapping)
 
-regression_perfomance_dashboard.show()
-
 regression_perfomance_dashboard.save("./static/regression_performance_after_week3.html")
 
 target_drift_dashboard.calculate(reference, current.loc['2011-02-15 00:00:00':'2011-02-21 23:00:00'], 
                                    column_mapping=column_mapping)
-
-target_drift_dashboard.show()
 
 target_drift_dashboard.save("./static/target_drift_after_week3.html")
 
@@ -132,8 +118,6 @@ column_mapping.numerical_features = numerical_features
 data_drift_dashboard = Dashboard(tabs=[DataDriftTab()])
 data_drift_dashboard.calculate(reference, current.loc['2011-01-29 00:00:00':'2011-02-07 23:00:00'], 
                                    column_mapping=column_mapping)
-
-data_drift_dashboard.show()
 
 data_drift_dashboard.save("./static/data_drift_dashboard_after_week1.html")
 
